@@ -1,0 +1,17 @@
+{% block content %}
+<h2>Register</h2>
+<style>
+    body {
+        color: black;
+        font-family: Arial, sans-serif;
+        font-size: large
+    }
+    </style>
+<form method="post">
+    {% csrf_token %}
+    {{form}}
+    <input type="submit" value="Register">
+</form>
+
+<a href="{% url 'home' %}">Go back</a>
+{% endblock %}

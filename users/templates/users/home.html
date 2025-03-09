@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <style>
+      body {
+        color: black;
+        text-align: center;
+        font-family: Arial, sans-serif;
+        font-size: large;
+      }
+      .auth-links a {
+        color: #007bff;
+        font-weight: bold;
+        font-size: x-large;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Hello, {{ user.username|default:'Guest' }}!</h1>
+    <p> </p>
+    <div>
+        {% if user.is_authenticated %}
+        <form action="{% url 'logout' %}" method="post">
+            {% csrf_token %}
+            <button type="submit">Logout</button>
+        </form>
+    {% else %}
+        <div class="auth-links">
+            <a href="{% url 'login' %}">Login</a>
+        </div>
+        <br>
+        <span>New here?</span>
+        <a href="{% url 'signup' %}">Sign Up!</a>
+    {% endif %}
+    </div>
+  </body>
+</html>

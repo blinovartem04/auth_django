@@ -1,0 +1,29 @@
+{% block content %}
+<style>
+  body {
+        color: black;
+        text-align: center;
+        font-family: Arial, sans-serif;
+        font-size: large;
+  }
+  table {
+    margin: 0 auto;
+  }
+  td {
+    text-align: center;
+  }
+</style>
+<h2>Login</h2>
+<form method="post">
+  {% csrf_token %}
+  <table>
+    {{ form.as_p }}
+    <tr>
+      <td colspan="2" style="text-align: center;">
+        <input type="submit" value="Submit">
+      </td>
+    </tr>
+  </table>
+</form>
+<a href="{% url 'home' %}">Go back</a>
+{% endblock %}
