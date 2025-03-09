@@ -1,6 +1,10 @@
 # Authentication Service
 Simple authentication system built with Django, allowing users to register, log in, and manage their accounts.
 
+<img src="https://github.com/user-attachments/assets/15c5f514-9717-48f6-b0a4-d6c6cfdfe586" width="400" />
+<img src="https://github.com/user-attachments/assets/ed724413-090b-40cb-93eb-e395153e2909" width="370" />
+<img src="https://github.com/user-attachments/assets/219fed36-be87-4d40-b853-1d0c50ebc084" width="400"/>
+
 # Key Features
 * User registration
 * Login for registered users
